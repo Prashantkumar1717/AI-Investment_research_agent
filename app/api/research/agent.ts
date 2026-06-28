@@ -49,9 +49,7 @@ const validateNode = async (state: typeof AgentState.State) => {
 // 3. Quantitative Node: Live Financial Extraction API
 const quantitativeNode = async (state: typeof AgentState.State) => {
   try {
-    yahooFinance._config.set({ 
-  logger: { info: () => {}, warn: () => {}, error: () => {} } 
-});
+    
     const summary = await yahooFinance.quoteSummary(state.ticker, {
       modules: [ "summaryDetail", "financialData", "defaultKeyStatistics" ]
     });
