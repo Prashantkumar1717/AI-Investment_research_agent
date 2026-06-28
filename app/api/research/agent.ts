@@ -50,7 +50,7 @@ const validateNode = async (state: typeof AgentState.State) => {
 const quantitativeNode = async (state: typeof AgentState.State) => {
   try {
     
-    const summary = await yahooFinance.quoteSummary(state.ticker, {
+    const summary: any = await yahooFinance.quoteSummary(state.ticker, {
       modules: [ "summaryDetail", "financialData", "defaultKeyStatistics" ]
     });
 
