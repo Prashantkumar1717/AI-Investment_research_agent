@@ -1,5 +1,26 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# AI Investment Research Agent Terminal 
+
+An autonomous, multi-node AI agent system built with Next.js, LangChain, and Groq to conduct deep quantitative and qualitative investment research. The application fetches real-time financial market metrics, evaluates core sector baselines, and generates clean, responsive visual data profiles.
+
+##  Features
+
+- **Autonomous Agent Layout:** Uses structured agent nodes to coordinate quantitative data analysis and market sentiment checks.
+- **Real-Time Data Streams:** Integrates directly with Yahoo Finance (`yahoo-finance2`) to query current asset valuations, key statistics, financial ratios, and market caps.
+- **Dynamic Charting Engine:** Renders comprehensive interactive radar profiles comparing target equity benchmarks against sector averages using Recharts.
+- **Groq AI Integration:** Powers ultra-fast, contextualized analytical reasoning and text reports summarizing company fundamentals.
+
+---
+
+##  Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **AI Orchestration:** LangChain / `@langchain/community`, Groq API
+- **Data Infrastructure:** `yahoo-finance2`, `@browserbasehq/stagehand`
+- **UI & Data Viz:** Tailwind CSS, Recharts, Lucide React
+
+
 ## Getting Started
 
 First, run the development server:
