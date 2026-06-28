@@ -1,24 +1,43 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# AI Investment Research Agent Terminal 
+# Vercel Deployment Link: 
+https://ai-investment-research-agent-eoi2-2clv4c2b4.vercel.app/
 
-An autonomous, multi-node AI agent system built with Next.js, LangChain, and Groq to conduct deep quantitative and qualitative investment research. The application fetches real-time financial market metrics, evaluates core sector baselines, and generates clean, responsive visual data profiles.
+# AI Investment Research Agent Terminal 📊🤖
 
-##  Features
-
-- **Autonomous Agent Layout:** Uses structured agent nodes to coordinate quantitative data analysis and market sentiment checks.
-- **Real-Time Data Streams:** Integrates directly with Yahoo Finance (`yahoo-finance2`) to query current asset valuations, key statistics, financial ratios, and market caps.
-- **Dynamic Charting Engine:** Renders comprehensive interactive radar profiles comparing target equity benchmarks against sector averages using Recharts.
-- **Groq AI Integration:** Powers ultra-fast, contextualized analytical reasoning and text reports summarizing company fundamentals.
+An autonomous, multi-node AI agent system that conducts deep quantitative and qualitative investment research on public equities. Powered by Next.js, LangChain, and Groq, the application fetches live market statistics, constructs visual risk/reward profiles, and delivers cohesive investment theses.
 
 ---
 
-##  Tech Stack
+## 🔍 Overview — What it Does
 
-- **Framework:** Next.js (App Router)
-- **AI Orchestration:** LangChain / `@langchain/community`, Groq API
-- **Data Infrastructure:** `yahoo-finance2`, `@browserbasehq/stagehand`
-- **UI & Data Viz:** Tailwind CSS, Recharts, Lucide React
+This application acts as an automated financial analyst team. By inputting a stock ticker (e.g., `AAPL`, `NVDA`), the system orchestrates a workflow that:
+- **Scrapes & Syncs Real-Time Market Metrics:** Sources valuation multiples, market caps, and financial health data.
+- **Benchmarks Target Assets:** Measures company data against core sector averages.
+- **Renders Quantitative Visualization:** Generates an interactive Radar Chart profile map directly on the user interface.
+- **Generates Contextualized Synthesis:** Uses high-speed LLM inference to craft a comprehensive final text summary outlining investment pros, cons, and a final research stance.
+
+---
+⚖️ Key Decisions & Trade-Offs
+Decisions Made:
+Type Casting for Yahoo Finance Outputs: Because the underlying data provider returns deeply nested objects with dynamic keys, strict TypeScript type validation flagged them as never.
+Vercel Deploy Accommodations: Implemented NPM_CONFIG_LEGACY_PEER_DEPS globally to bypass upstream package alignment errors during automated serverless compilation.
+
+Component-Level Styling Overrides: Replaced shorthand padding styles inside standard React configuration objects with explicit camelCase properties (paddingTop) to fulfill strict CSS object typing.
+
+Example 1: Apple Inc. (AAPL)
+Quantitative Data Collected: Current Price: $180.20 | Market Cap: $2.8T | Trailing P/E: 28.4
+
+Agent Stance: Neutral / Hold
+
+Core Summary: Strong cash position and robust services growth offset by compressed hardware cycles and hardware valuation multiples stretching above historical benchmarks.
+
+Example 2: Nvidia Corporation (NVDA)
+Quantitative Data Collected: Current Price: $875.12 | Market Cap: $2.1T | Forward P/E: 35.1
+
+Agent Stance: Bullish / Buy
+
+Core Summary: Unprecedented sector dominance in enterprise hardware scaling infrastructure. While high multiples present a clear risk profile, near-term growth velocity justifies premium pricing.
 
 
 ## Getting Started
