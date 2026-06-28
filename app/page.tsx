@@ -427,7 +427,7 @@ export default function Home() {
                   <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
                   <Radar name={`Target Profile (${report.ticker || "Asset"})`} dataKey="Company" stroke="#06b6d4" strokeWidth={2} fill="#06b6d4" fillOpacity={0.15} />
                   <Radar name="Sector Core Benchmark" dataKey="SectorAvg" stroke="#10b981" strokeWidth={1.5} strokeDasharray="4 4" fill="#10b981" fillOpacity={0.03} />
-                  <Legend wrapperStyle={{ fontSize: "12px", pt: "20px", fontWeight: 500 }} />
+                  <Legend wrapperStyle={{ fontSize: "12px", paddingTop: "20px", fontWeight: 500 }} />
                 </RadarChart>
               </ResponsiveContainer>
             </div>
