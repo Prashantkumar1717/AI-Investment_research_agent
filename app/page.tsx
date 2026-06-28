@@ -421,7 +421,7 @@ export default function Home() {
               </div>
               
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="48%" radius="75%" data={chartData}>
+                <RadarChart cx="50%" cy="48%" outerRadius="75%" data={chartData}>
                   <PolarGrid stroke={isDarkMode ? "#1e293b" : "#cbd5e1"} strokeWidth={1.5} />
                   <PolarAngleAxis dataKey="subject" stroke={isDarkMode ? "#64748b" : "#475569"} fontSize={11} fontWeight={600} />
                   <PolarRadiusAxis angle={30} domain={[0, 100]} tick={false} axisLine={false} />
